@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <style>
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar li {
+            float: left;
+        }
+        .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar li a:hover {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar" id="navbar"></ul>
+
+    <script>
+        // Provided data
+        const data = [
+            [34, 1351, 1],
+            [34, 1351, 2],
+            [34, 3688, 3],
+            [34, 3689, 4],
+            [34, 3690, 5],
+            [34, 819, 1870],
+            [35, 854, 1159],
+            [35, 1699, 2041],
+            [36, 2806, 1818],
+            [36, 2806, 1766],
+            [36, 392, 1374],
+            [36, 392, 1618],
+            [36, 398, 1374],
+            [36, 398, 1618],
+            [36, 1767, 6],
+            [36, 3494, 1655],
+            [36, 3494, 1725],
+            [36, 3494, 1766]
+        ];
+
+        // Group data by the first column (Group)
+        const groupedData = data.reduce((acc, [group, id, order]) => {
+            if (!acc[group]) {
+                acc[group] = [];
+            }
+            acc[group].push({ id, order });
+            return acc;
+        }, {});
+
+        // Sort items within each group by order
+        for (const group in groupedData) {
+            groupedData[group].sort((a, b) => a.order - b.order);
+        }
+
+        // Generate navbar HTML
+        const navbar = document.getElementById('navbar');
+        for (const group in groupedData) {
+            const groupItem = document.createElement('li');
+            groupItem.className = 'dropdown';
+            groupItem.innerHTML = `<a href="#">Group ${group}</a>`;
+            const dropdownContent = document.createElement('div');
+            dropdownContent.className = 'dropdown-content';
+
+            groupedData[group].forEach(item => {
+                const link = document.createElement('a');
+                link.href = `#${item.id}`;
+                link.textContent = `Item ${item.id}`;
+                dropdownContent.appendChild(link);
+            });
+
+            groupItem.appendChild(dropdownContent);
+            navbar.appendChild(groupItem);
+        }
+    <ul class="navbar" id="navbar"></ul>
+
+    <script>
+        // Provided data
+        const data = [
+            [34, 1351, 1],
+            [34, 1351, 2],
+            [34, 3688, 3],
+            [34, 3689, 4],
+            [34, 3690, 5],
+            [34, 819, 1870],
+            [35, 854, 1159],
+            [35, 1699, 2041],
+            [36, 2806, 1818],
+            [36, 2806, 1766],
+            [36, 392, 1374],
+            [36, 392, 1618],
+            [36, 398, 1374],
+            [36, 398, 1618],
+            [36, 1767, 6],
+            [36, 3494, 1655],
+            [36, 3494, 1725],
+            [36, 3494, 1766]
+        ];
+
+        // Group data by ID
+        const groupedData = data.reduce((acc, [group, id, order]) => {
+            if (!acc[id]) {
+                acc[id] = [];
+            }
+            acc[id].push(order);
+            return acc;
+        }, {});
+
+        // Generate navbar HTML
+        const navbar = document.getElementById('navbar');
+        for (const id in groupedData) {
+            const groupItem = document.createElement('li');
+            groupItem.className = 'dropdown';
+            groupItem.innerHTML = `<a href="#">ID ${id}</a>`;
+            const dropdownContent = document.createElement('div');
+            dropdownContent.className = 'dropdown-content';
+
+            groupedData[id].forEach(order => {
+                const link = document.createElement('a');
+                link.href = `#${order}`;
+                link.textContent = `Order ${order}`;
+                dropdownContent.appendChild(link);
+            });
+
+            groupItem.appendChild(dropdownContent);
+            navbar.appendChild(groupItem);
+        }
+    </script>
+    </script>
+</body>
+</html>

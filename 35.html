@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border: 2px solid black;
+            padding: 5px;
+        }
+        div{
+            border: 5px dotted;
+            gap: 5px;
+            
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+            background: #444;
+        }
+
+        .menu > li:hover > a {
+            background: #555;
+        }
+
+        /* First Level Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #444;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .menu li:hover > .dropdown {
+            display: block;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown li a:hover {
+            background: #555;
+        }
+
+        /* Second Level Dropdown */
+        .sub-dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: #555;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .dropdown li:hover .sub-dropdown {
+            display: block;
+        }
+
+        .sub-dropdown li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sub-dropdown li a:hover {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="">খতিয়ান 34 ▼</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">দাগ 1351 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1</a></li>
+                                <li><a href="#">খতিয়ান 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">দাগ 3688 - খতিয়ান 3</a></li>
+                        <li><a href="#">দাগ 3689 - খতিয়ান 4</a></li>
+                        <li><a href="#">দাগ 3690 - খতিয়ান 5</a></li>
+                        <li><a href="#">দাগ 819 -  খতিয়ান 1870</a></li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="">খতিয়ান 35 ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">দাগ 854 - খতিয়ান 1159</a></li>
+                        <li><a href="#">দাগ 1699 - খতিয়ান 2041</a></li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="">খতিয়ান 36 ▼</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">দাগ 2806 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1818</a></li>
+                                <li><a href="#">খতিয়ান 1766</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">দাগ 392 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1374</a></li>
+                                <li><a href="#">খতিয়ান 1618</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">দাগ 398 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1374</a></li>
+                                <li><a href="#">খতিয়ান 1618</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">দাগ 1767 - Order 6</a></li>
+                        <li>
+                            <a href="#">দাগ 3494 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1655</a></li>
+                                <li><a href="#">খতিয়ান 1725</a></li>
+                                <li><a href="#">খতিয়ান 1766</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    
+    <div>
+        <h1>854</h1>
+    <li><a href="" target="_parent">খতিয়ান - 1159</a></li>
+    <li>>খাজনা ১২০৭</li>
+    <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ নইমুদ্দিন খামারু</td>
+                <td>পিং মৃত গমু খামারু</td>
+                <td>০১৬২৬৬৭২৪৯৫</td>
+                <td>০.৫</td>
+            </tr>
+            <tr>
+                <td>মোছাঃ মফুরা বিবি</td>
+                <td>জং মোঃ নইমুদ্দিন খামারু</td>
+                <td>০১৬২৬৬৭২৪৯৫</td>
+                <td>০.৫</td>
+            </tr>
+        </table>
+    </li>
+    <li><a href="" target="_parent">বিস্তারিত</a></li>
+    </div>
+    <div>
+        
+        <h1>1699</h1>
+       <li><a href="" target="_parent">খতিয়ান - ২০৪১</a></li>
+       <li>>খাজনা ২১২৫</li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ ওয়াজ বকস মন্ডল</td>
+                <td>পিং মৃতঃ নহির মন্ডল</td>
+                <td>০১৬২৬৬৭২৪৯৫</td>
+                <td>০.৫</td>
+            </tr>
+            <tr>
+                <td>মোছাঃ ফরিদা বেগম</td>
+                <td>জং মোঃ ওয়াজ বকস মন্ডল</td>
+                <td>০১৬২৬৬৭২৪৯৫</td>
+                <td>০.৫</td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+    </div>
+    
+</body>
+</html>

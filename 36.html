@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border: 2px solid black;
+            padding: 5px;
+            
+        }
+        div{
+            border: 5px dotted;
+            gap: 5px;
+            
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+            background: #444;
+        }
+
+        .menu > li:hover > a {
+            background: #555;
+        }
+
+        /* First Level Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #444;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .menu li:hover > .dropdown {
+            display: block;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown li a:hover {
+            background: #555;
+        }
+
+        /* Second Level Dropdown */
+        .sub-dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: #555;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .dropdown li:hover .sub-dropdown {
+            display: block;
+        }
+
+        .sub-dropdown li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sub-dropdown li a:hover {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="">খতিয়ান 34 ▼</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">দাগ 1351 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1</a></li>
+                                <li><a href="#">খতিয়ান 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">দাগ 3688 - খতিয়ান 3</a></li>
+                        <li><a href="#">দাগ 3689 - খতিয়ান 4</a></li>
+                        <li><a href="#">দাগ 3690 - খতিয়ান 5</a></li>
+                        <li><a href="#">দাগ 819 -  খতিয়ান 1870</a></li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="">খতিয়ান 35 ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">দাগ 854 - খতিয়ান 1159</a></li>
+                        <li><a href="#">দাগ 1699 - খতিয়ান 2041</a></li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="">খতিয়ান 36 ▼</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">দাগ 2806 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1818</a></li>
+                                <li><a href="#">খতিয়ান 1766</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">দাগ 392 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1374</a></li>
+                                <li><a href="#">খতিয়ান 1618</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">দাগ 398 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1374</a></li>
+                                <li><a href="#">খতিয়ান 1618</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">দাগ 1767 - Order 6</a></li>
+                        <li>
+                            <a href="#">দাগ 3494 ▼</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">খতিয়ান 1655</a></li>
+                                <li><a href="#">খতিয়ান 1725</a></li>
+                                <li><a href="#">খতিয়ান 1766</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <h1><a href="test.html">test</a></h1>
+    <div id="2806">
+        <h1>2806</h1>
+    <li><a href="" target="_parent">খতিয়ান - 1818</a></li>
+    <li>>খাজনা 1910</li>
+    <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ আঃ হামিদ মোল্যা</td>
+                <td>সমসের আলী মোল্লা</td>
+                <td>০১৭৫৮২৬২১৮৩</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </li>
+    <li><a href="" target="_parent">বিস্তারিত</a></li>
+    
+        <h1>2806</h1>
+    <li><a href="" target="_parent">খতিয়ান - 1766</a></li>
+    <li>>খাজনা 1858</li>
+    <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ আব্দুর রশিদ প্রাং</td>
+                <td>পিং মৃতঃ রাহাতুল্যা প্রাং</td>
+                <td>০১৬২৬৬৭২৪৯৫</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </li>
+    <li><a href="" target="_parent">বিস্তারিত</a></li>
+    </div>
+    <div>
+        
+        <h1>392</h1>
+       <li><a href="" target="_parent">খতিয়ান - 1374</a></li>
+       <li>>খাজনা 1430</li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :খোজপুর
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ হাসেন আলী মন্ডল</td>
+                <td>মৃত ইসরাফিল মন্ডল</td>
+                <td></td>
+                <td>১</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+
+
+      <h1>392</h1>
+       <li><a href="" target="_parent">খতিয়ান - ১৬১৮</a></li>
+       <li>>খাজনা ১৭০৭</li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ গোলাম সাকলায়েন</td>
+                <td>মোঃ খোদা বক্স মোল্লা</td>
+                <td>০১৭১১১৮১৯৭৬</td>
+                <td>০.৫১</td>
+            </tr>
+            <tr>
+                <td>মোছাঃ নাজমা বেগম</td>
+                <td>জং মোঃ গোলাম সাকলায়েন</td>
+                <td>০১৭১১১৮১৯৭৬</td>
+                <td>০.৩৫৬</td>
+            </tr>
+            <tr>
+                <td>মোছাঃ গোলনাহার বেগম</td>
+                <td>জং মোঃ খোদা বক্স মোল্লা</td>
+                <td>০১৭১১১৮১৯৭৬</td>
+                <td>০.১৩৪</td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+    </div>
+    <div id="398">
+        
+        <h1>398</h1>
+       <li><a href="" target="_parent">খতিয়ান - 1374</a></li>
+       <li>>খাজনা 1430</li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :খোজপুর
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ হাসেন আলী মন্ডল</td>
+                <td>মৃত ইসরাফিল মন্ডল</td>
+                <td></td>
+                <td>১</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+
+
+      <h1>398</h1>
+       <li><a href="" target="_parent">খতিয়ান - ১৬১৮</a></li>
+       <li>>খাজনা ১৭০৭</li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>মোঃ গোলাম সাকলায়েন</td>
+                <td>মোঃ খোদা বক্স মোল্লা</td>
+                <td>০১৭১১১৮১৯৭৬</td>
+                <td>০.৫১</td>
+            </tr>
+            <tr>
+                <td>মোছাঃ নাজমা বেগম</td>
+                <td>জং মোঃ গোলাম সাকলায়েন</td>
+                <td>০১৭১১১৮১৯৭৬</td>
+                <td>০.৩৫৬</td>
+            </tr>
+            <tr>
+                <td>মোছাঃ গোলনাহার বেগম</td>
+                <td>জং মোঃ খোদা বক্স মোল্লা</td>
+                <td>০১৭১১১৮১৯৭৬</td>
+                <td>০.১৩৪</td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+    </div>
+
+    <div id="1767">
+        
+        <h1>1699</h1>
+       <li><a href="" target="_parent">খতিয়ান - </a></li>
+       <li>>খাজনা </li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা : দুর্গাপুর <br>
+                মৌজা :পালশা
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+    </div>
+    <div id="3494">
+        
+        <h1>3494</h1>
+       <li><a href="" target="_parent">খতিয়ান - 1655</a></li>
+       <li>>খাজনা 1744</li>
+       <li>
+        <table>
+            <tr> জেলা : রাজশাহী <br>
+                উপজেলা :  <br>
+                মৌজা : রানীনগর , সাধুরমোড়
+                <td>মালিকের নাম</td>
+                <td>মালিকের পিতার নাম</td>
+                <td>মালিকের মোবাইল</td>
+                <td>মালিকের অংশ</td>
+            </tr>
+            <tr>
+                <td>কবির মোস্তাক আহম্মেদ</td>
+                <td>পিং রায়হান উদ্দিন আহম্মেদ</td>
+                <td>০১৬২৬৬৭২৪৯৫</td>
+                <td>১</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+      </li>
+      <li><a href="" target="_parent">বিস্তারিত</a></li>
+
+      <!-- ...।। -->
+      <h1>3494</h1>
+      <li><a href="" target="_parent">খতিয়ান - ১৭২৫</a></li>
+      <li>>খাজনা ১৮১৮</li>
+      <li>
+       <table>
+           <tr> জেলা : রাজশাহী <br>
+               উপজেলা :  <br>
+               মৌজা : সাতবাড়িয়া, মতিহার
+               <td>মালিকের নাম</td>
+               <td>মালিকের পিতার নাম</td>
+               <td>মালিকের মোবাইল</td>
+               <td>মালিকের অংশ</td>
+           </tr>
+           <tr>
+               <td>মোঃ নাজমুল হক</td>
+               <td>পিং মোঃ মাহাতাব উদ্দিন মিয়া</td>
+               <td>০১৬২৬৬৭২৪৯৫</td>
+               <td>১</td>
+           </tr>
+           <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+       </table>
+     </li>
+     <li><a href="" target="_parent">বিস্তারিত</a></li>
+
+     <!-- ...।।/// -->
+     <h1>3494</h1>
+     <li><a href="" target="_parent">খতিয়ান - ১৭৬৬</a></li>
+     <li>>খাজনা ১৮৫৮</li>
+     <li>
+      <table>
+          <tr> জেলা : রাজশাহী <br>
+              উপজেলা : দুর্গাপুর <br>
+              মৌজা : পালশা
+              <td>মালিকের নাম</td>
+              <td>মালিকের পিতার নাম</td>
+              <td>মালিকের মোবাইল</td>
+              <td>মালিকের অংশ</td>
+          </tr>
+          <tr>
+              <td>মোঃ আব্দুর রশিদ প্রাং</td>
+              <td>পিং মৃতঃ রাহাতুল্যা প্রাং</td>
+              <td>০১৬২৬৬৭২৪৯৫</td>
+              <td>১</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </table>
+    </li>
+    <li><a href="" target="_parent">বিস্তারিত</a></li>
+
+
+
+    </div>
+    
+    
+</body>
+</html>

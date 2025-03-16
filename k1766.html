@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>খতিয়ান ১৭৬৬</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+            background: #444;
+        }
+
+        .menu > li:hover > a {
+            background: #555;
+        }
+
+        /* First Level Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #444;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .menu li:hover > .dropdown {
+            display: block;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown li a:hover {
+            background: #555;
+        }
+
+        /* Second Level Dropdown */
+        .sub-dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: #555;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .dropdown li:hover .sub-dropdown {
+            display: block;
+        }
+
+        .sub-dropdown li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sub-dropdown li a:hover {
+            background: #666;
+        } 
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="">খতিয়ান 34 ▼</a>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#">দাগ 1351 ▼</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="#">খতিয়ান 1</a></li>
+                            <li><a href="#">খতিয়ান 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">দাগ 3688 - খতিয়ান 3</a></li>
+                    <li><a href="#">দাগ 3689 - খতিয়ান 4</a></li>
+                    <li><a href="#">দাগ 3690 - খতিয়ান 5</a></li>
+                    <li><a href="#">দাগ 819 -  খতিয়ান 1870</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="">খতিয়ান 35 ▼</a>
+                <ul class="dropdown">
+                    <li><a href="#">দাগ 854 - খতিয়ান 1159</a></li>
+                    <li><a href="#">দাগ 1699 - খতিয়ান 2041</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="">খতিয়ান 36 ▼</a>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#">দাগ 2806 ▼</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="#">খতিয়ান 1818</a></li>
+                            <li><a href="#">খতিয়ান 1766</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">দাগ 392 ▼</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="#">খতিয়ান 1374</a></li>
+                            <li><a href="#">খতিয়ান 1618</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">দাগ 398 ▼</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="#">খতিয়ান 1374</a></li>
+                            <li><a href="#">খতিয়ান 1618</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">দাগ 1767 - Order 6</a></li>
+                    <li>
+                        <a href="#">দাগ 3494 ▼</a>
+                        <ul class="sub-dropdown">
+                            <li><a href="#">খতিয়ান 1655</a></li>
+                            <li><a href="#">খতিয়ান 1725</a></li>
+                            <li><a href="#">খতিয়ান 1766</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <pre>
+        মালিকের নাম - মোঃ আব্দুর রশিদ প্রাং
+        মালিকের পিতার নাম - পিং মৃতঃ রাহাতুল্যা প্রাং
+        মালিকের মোবাইল ০১৬২৬৬৭২৪৯৫
+        মালিকের অংশ - ১
+    </pre>
+    <pre>
+        সাধারণ তথ্য
+        খতিয়ান নং ১৭৬৬
+        হোল্ডিং নং ১৮৫৮
+        দাগ নং ২৮০৬ ৩৪৯৪
+
+               ২৮০৬	ধানী	৭.৯৪
+               ৩৪৯৪	ধানী	৩.৯৭ 
+    </pre>
+</body>
+</html>
